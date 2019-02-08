@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(moveit_simple_controller_manager)
 
+set (CMAKE_CXX_STANDARD 11)
+
 if(NOT CMAKE_CONFIGURATION_TYPES AND NOT CMAKE_BUILD_TYPE)
   set(CMAKE_BUILD_TYPE Release)
 endif()
@@ -15,6 +17,7 @@ find_package(catkin COMPONENTS
   actionlib
   roscpp
   control_msgs
+  action_controller
   REQUIRED)
 
 include_directories(${catkin_INCLUDE_DIRS})
